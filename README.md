@@ -46,7 +46,7 @@ A template engine enables you to use static template files in your application. 
 
 ## NodeJS General Information
 1. To initialize a new NodeJS Project, create the project folder, open a terminal and use the command ```npm init```
-2. To install a new package use ```npm i [package-name]```. If you want to save the package in DevDependencies use ```npm i [package-name] --save-dev
+2. To install a new package use ```npm i [package-name]```. If you want to save the package in DevDependencies use ```npm i [package-name] --save-dev```
 3. To uninstall a package use ```npm u [package-name]```
 4. To add a new script open ```package.json```, find scripts and below a script can be added. Usually a ```start script``` is added.<br>
    Example: ```"start": "nodemon server.js"```, if ```nodemon``` is used in the project.<br>
