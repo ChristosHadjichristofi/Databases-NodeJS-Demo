@@ -33,10 +33,10 @@ exports.getLanding = (req, res, next) => {
         Promise.all([dribblingPromise, shootingPromise]).then(() => {
             res.render('landing.ejs', {
                 pageTitle: "Landing Page",
-                best_dribbling_grade: best_dribbling_grade,
-                best_dribbler: best_dribbler,
-                best_shooter: best_shooter,
-                best_shooting_grade: best_shooting_grade
+                best_dribbling_grade,
+                best_dribbler,
+                best_shooter,
+                best_shooting_grade
             })
         });
 
