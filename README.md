@@ -1,2 +1,46 @@
 # Databases-NodeJS-Demo
-[ECE NTUA] Databases project demo using NodeJS and MySQL
+
+## Dependencies
+1. [NodeJS](https://nodejs.org/en/)
+2. [MySQL for Windows](https://dev.mysql.com/downloads/installer/)
+
+## Required NodeJS Dependencies
+1. [express](https://www.npmjs.com/package/express) - minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications
+2. [mysql2](https://www.npmjs.com/package/mysql2) - mysql driver
+3. [ejs](https://www.npmjs.com/package/ejs) - a templating engine
+
+## Optional NodeJS Dependencies
+1. [nodemon](https://www.npmjs.com/package/nodemon) - a command-line interface (CLI) utility developed by @rem that wraps your Node app, watches the file system, and automatically restarts the process
+2. [chalk](https://www.npmjs.com/package/chalk) - style terminal strings 
+3. [custom-env](https://www.npmjs.com/package/custom-env) - configure different environments for your project. For example you can create a file named ```.env.localhost``` and keep the variables when you're in the development phase. Usually used so as to keep credentials safe, so as they don't get uploaded to any hosting platforms that are used for Version Control like GitHub
+
+### custom-env Example
+1. Create a file named .env.localhost
+2. Import it by using ```require('custom-env').env('localhost');```
+3. ```.env.localhost``` content
+```
+SERVER_PORT=3000
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=dbuser
+DB_PASS=dbpass
+DB=db-name
+```
+
+## Useful Tools
+1. Database Administration Tools like [Dbeaver](https://dbeaver.io/), [Navicat](https://www.navicat.com/en/), [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+
+## Project Folder Hierarchy
+1. controllers - the logic of the routes (where the sql queries take place, and then the result can be either returned rendered or in other ways like JSON, csv etc.
+2. public - all publicly accessible files that a user of the system can have access (usually css, icons, static pages etc)
+3. routes - the endpoints of the application. Endpoints are simply a unique URL where a specific task is completed. For example http://localhost:3000/signin is used for signing in an application, http://localhost:3000/user/5 is to get the user with the id eq to 5 etc
+4. utils - can contain any utilities you want for your project, for example the connection of the database, so as you can just import and use it when needed (mostly in controllers)
+5.  views - the pages of the project (More on what the templating engine does)
+
+## What is a Templating Engine
+A template engine enables you to use static template files in your application. At runtime, the template engine replaces variables in a template file with actual values, and transforms the template into an HTML file sent to the client. This approach makes it easier to design an HTML page.
+
+### Alternatives of EJS
+1. [Handlebars](https://handlebarsjs.com/)
+2. [Pug](https://pugjs.org/api/getting-started.html)
+
