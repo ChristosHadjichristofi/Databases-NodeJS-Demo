@@ -51,3 +51,9 @@ A template engine enables you to use static template files in your application. 
 4. To add a new script open ```package.json```, find scripts and below a script can be added. Usually a ```start script``` is added.<br>
    Example: ```"start": "nodemon server.js"```, if ```nodemon``` is used in the project.<br>
    To use the script execute ```npm start```
+
+![landing](https://user-images.githubusercontent.com/40044042/156389573-9e6c1c3a-1488-4e39-913f-96dd11091adb.png)
+
+![students](https://user-images.githubusercontent.com/40044042/156389596-a409b129-e9cb-4946-9d9d-47f113c1d8f3.png)
+
+![grades](https://user-images.githubusercontent.com/40044042/156389628-1653aba7-c033-48d0-ac3a-df37374f0d1e.png)
