@@ -8,6 +8,7 @@
 1. [express](https://www.npmjs.com/package/express) - minimal and flexible Node.js web application framework that provides a robust set of features to develop web and mobile applications
 2. [mysql2](https://www.npmjs.com/package/mysql2) - mysql driver
 3. [ejs](https://www.npmjs.com/package/ejs) - a templating engine
+4. [faker](https://www.npmjs.com/package/faker/v/5.5.3) - to create dummy data
 
 ## Optional NodeJS Dependencies
 1. [nodemon](https://www.npmjs.com/package/nodemon) - a command-line interface (CLI) utility developed by @rem that wraps your Node app, watches the file system, and automatically restarts the process
@@ -51,6 +52,10 @@ A template engine enables you to use static template files in your application. 
 4. To add a new script open ```package.json```, find scripts and below a script can be added. Usually a ```start script``` is added.<br>
    Example: ```"start": "nodemon server.js"```, if ```nodemon``` is used in the project.<br>
    To use the script execute ```npm start```
+
+## Create Dummy Data
+1. Using the [faker](https://www.npmjs.com/package/faker/v/5.5.3) package dummy data can be created. It can create all kind of data (More on the documentation of the package)
+2. To run the ```creator.js``` script which is located inside ```dummyDataCreator``` folder, run ```npm run create-data```, which is a custom script (custom scripts can be declared in ```package.json``` and can be run with ```npm run <script-name>```)
 
 ![landing](https://user-images.githubusercontent.com/40044042/156389573-9e6c1c3a-1488-4e39-913f-96dd11091adb.png)
 

@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "create-data": "node dummyDataCreator/creator.js"
   },
   "author": "Christos Hadjichristofi",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "custom-env": "^2.0.1",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
+    "faker": "^5.5.3",
     "mysql2": "^2.3.3"
   }
 }

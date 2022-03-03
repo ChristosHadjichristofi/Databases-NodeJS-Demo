@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80022
 File Encoding         : 65001
 
-Date: 2022-03-02 12:17:16
+Date: 2022-03-03 14:01:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -51,17 +51,27 @@ INSERT INTO `grades` VALUES ('12', 'PHY', '65', '2');
 -- ----------------------------
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE `students` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `surname` varchar(45) NOT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of students
 -- ----------------------------
 INSERT INTO `students` VALUES ('1', 'Cristiano', 'Ronaldo', 'cr7@mail.com');
 INSERT INTO `students` VALUES ('2', 'Lionel', 'Messi', 'lm10@mail.com');
+INSERT INTO `students` VALUES ('3', 'Pedro', 'Wilkinson', 'Salma74@yahoo.com');
+INSERT INTO `students` VALUES ('4', 'Lana', 'Larkin', 'Dale_Jast@yahoo.com');
+INSERT INTO `students` VALUES ('5', 'Daniel', 'Kovacek', 'Janelle_Anderson@gmail.com');
+INSERT INTO `students` VALUES ('6', 'Stewart', 'Botsford', 'Delaney4@yahoo.com');
+INSERT INTO `students` VALUES ('7', 'Charlotte', 'Shanahan', 'Damon_Cremin@yahoo.com');
+INSERT INTO `students` VALUES ('8', 'Pete', 'Bauch', 'Aisha55@yahoo.com');
+INSERT INTO `students` VALUES ('9', 'Lori', 'Baumbach', 'Jude8@yahoo.com');
+INSERT INTO `students` VALUES ('10', 'Ignacio', 'Kuhn', 'Shea_Hayes@hotmail.com');
+INSERT INTO `students` VALUES ('11', 'Marsha', 'O\'Kon', 'Brigitte.Macejkovic@gmail.com');
+INSERT INTO `students` VALUES ('12', 'Lora', 'Mann', 'Orland_Welch@hotmail.com');
 SET FOREIGN_KEY_CHECKS=1;
