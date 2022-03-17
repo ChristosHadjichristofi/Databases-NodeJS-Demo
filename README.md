@@ -9,6 +9,8 @@
 2. [mysql2](https://www.npmjs.com/package/mysql2) - mysql driver
 3. [ejs](https://www.npmjs.com/package/ejs) - a templating engine
 4. [faker](https://www.npmjs.com/package/faker/v/5.5.3) - to create dummy data
+5. [express-session](https://www.npmjs.com/package/express-session) - Create session middleware
+6. [connect-flash](https://www.npmjs.com/package/connect-flash) - The flash is a special area of the session used for storing messages
 
 ## Optional NodeJS Dependencies
 1. [nodemon](https://www.npmjs.com/package/nodemon) - a command-line interface (CLI) utility developed by @rem that wraps your Node app, watches the file system, and automatically restarts the process
