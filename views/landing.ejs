@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
     <div class="container" id="row-container">
         <div class="row" id="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card" id="card-container-layout">
                     <div class="card-body" id="card">
                         <h4 class="card-title">View Students</h4>
@@ -25,12 +26,21 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card" id="card-container-layout">
                     <div class="card-body" id="card">
                         <h4 class="card-title">View Grades</h4>
                         <p class="card-text" id="paragraph">Simple Query to database to show students' grades<br></p>
                         <a class="btn btn-primary" id="show-btn" href="/grades">Show</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" id="card-container-layout">
+                    <div class="card-body" id="card">
+                        <h4 class="card-title">Create Student</h4>
+                        <p class="card-text" id="paragraph">Enter a new student into the database<br></p>
+                        <a class="btn btn-primary" id="show-btn" href="/student-creation-page">Create</a>
                     </div>
                 </div>
             </div>
@@ -57,6 +67,42 @@
 
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            toastr.options = {
+                "closeButton": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": false
+            };
+            /* In order to access variables sent to ejs file to script you must Parse them to string */
+            /* then to parse them back to JSON */
+            let messages = '<%- JSON.stringify(messages) %>';
+            messages = JSON.parse(messages);
+            messages.forEach(({
+                type,
+                value
+            }) => {
+                switch (type) {
+                    case 'error':
+                        toastr.error(value)
+                        break;
+                    case 'success':
+                        toastr.success(value)
+                        break;
+                    case 'warning':
+                        toastr.warning(value)
+                        break;
+                    default:
+                        toastr.info(value)
+                        break;
+                }
+            });
+        })
+    </script>
+
 </body>
 
 </html>

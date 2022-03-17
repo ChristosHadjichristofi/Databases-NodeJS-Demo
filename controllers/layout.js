@@ -1,6 +1,8 @@
 const { pool } = require('../utils/database');
 
 exports.getLanding = (req, res, next) => {
+    let messages = req.flash("messages");
+    if (messages.length == 0) messages = [];
 
     let best_dribbling_grade, best_dribbler, best_shooting_grade, best_shooter;
 
@@ -36,9 +38,16 @@ exports.getLanding = (req, res, next) => {
                 best_dribbling_grade,
                 best_dribbler,
                 best_shooter,
-                best_shooting_grade
+                best_shooting_grade,
+                messages
             })
         });
 
+    })
+}
+
+exports.getCreateStudent = (req, res, next) => {
+    res.render('create_student.ejs', {
+        pageTitle: "Student Creation Page"
     })
 }

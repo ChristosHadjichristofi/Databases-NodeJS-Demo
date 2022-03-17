@@ -17,3 +17,24 @@ exports.getStudents = (req, res, next) => {
     })
 
 }
+
+exports.postStudent = (req, res, next) => {
+    const name = req.body.name;
+    const surname = req.body.surname;
+    const email = req.body.email;
+
+    pool.getConnection((err, conn) => {
+        var sqlQuery = `INSERT INTO students(name, surname, email) VALUES(?, ?, ?)`;
+
+        conn.promise().query(sqlQuery, [name, surname, email])
+        .then(() => {
+            pool.releaseConnection(conn);
+            req.flash('messages', { type: 'success', value: "Successfully added a new Student!" })
+            res.redirect('/');
+        })
+        .catch(err => {
+            req.flash('messages', { type: 'error', value: "Something went wrong, Student could not be added." })
+            res.redirect('/');
+        })
+    })
+}

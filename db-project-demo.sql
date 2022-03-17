@@ -1,15 +1,12 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : db-project-demo
 Source Server Version : 80022
 Source Host           : localhost:3306
 Source Database       : db-project-demo
-
 Target Server Type    : MYSQL
 Target Server Version : 80022
 File Encoding         : 65001
-
 Date: 2022-03-03 14:01:37
 */
 
@@ -22,7 +19,7 @@ DROP TABLE IF EXISTS `grades`;
 CREATE TABLE `grades` (
   `id` int NOT NULL,
   `course_name` varchar(45) NOT NULL,
-  `grade` int NOT NULL,
+  `grade` int NOT NULL CHECK (`grade` >= 0 AND `grade` <= 100),
   `student_id` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
@@ -54,7 +51,7 @@ CREATE TABLE `students` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `surname` varchar(45) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL CHECK (`email` LIKE '_%@_%._%'),
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
