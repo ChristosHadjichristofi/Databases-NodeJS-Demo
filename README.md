@@ -59,7 +59,9 @@ A template engine enables you to use static template files in your application. 
 1. Using the [faker](https://www.npmjs.com/package/faker/v/5.5.3) package dummy data can be created. It can create all kind of data (More on the documentation of the package)
 2. To run the ```creator.js``` script which is located inside ```dummyDataCreator``` folder, run ```npm run create-data```, which is a custom script (custom scripts can be declared in ```package.json``` and can be run with ```npm run <script-name>```)
 
-![landing](https://user-images.githubusercontent.com/40044042/156389573-9e6c1c3a-1488-4e39-913f-96dd11091adb.png)
+![landing](https://user-images.githubusercontent.com/40044042/159064916-aac1a816-33ff-4e6f-9e63-45c31c7044a3.png)
+
+![add-student](https://user-images.githubusercontent.com/40044042/159064953-cf6b808a-062a-48c7-b140-67b141b50604.png)
 
 ![students](https://user-images.githubusercontent.com/40044042/156389596-a409b129-e9cb-4946-9d9d-47f113c1d8f3.png)
 
