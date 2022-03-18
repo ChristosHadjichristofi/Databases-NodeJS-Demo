@@ -1,5 +1,9 @@
 # Databases-NodeJS-Demo
 
+## Demo created with other Languages and Technologies
+1. [NodeJS](https://github.com/ChristosHadjichristofi/Databases-Java-Demo)
+2. [Python](https://github.com/DimK19/Databases-Python-Demo)
+
 ## Dependencies
 1. [NodeJS](https://nodejs.org/en/)
 2. [MySQL for Windows](https://dev.mysql.com/downloads/installer/)
