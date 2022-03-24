@@ -6,7 +6,6 @@ exports.getStudents = (req, res, next) => {
         
         conn.promise().query('SELECT * FROM students')
         .then(([rows, fields]) => {
-            console.log(rows)
             res.render('students.ejs', {
                 pageTitle: "Students Page",
                 students: rows
