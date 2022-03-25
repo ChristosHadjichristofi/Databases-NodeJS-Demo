@@ -1,9 +1,13 @@
 const { pool } = require('../utils/database');
 
+/* Controller to retrieve students from database */
 exports.getStudents = (req, res, next) => {
+
+    /* check for messages in order to show them when rendering the page */
     let messages = req.flash("messages");
     if (messages.length == 0) messages = [];
 
+    /* create the connection, execute query, render data */
     pool.getConnection((err, conn) => {
         
         conn.promise().query('SELECT * FROM students')
@@ -20,11 +24,15 @@ exports.getStudents = (req, res, next) => {
 
 }
 
+/* Controller to create a new student in the database */
 exports.postStudent = (req, res, next) => {
+
+    /* get necessary data sent */
     const name = req.body.name;
     const surname = req.body.surname;
     const email = req.body.email;
 
+    /* create the connection, execute query, flash respective message and redirect to grades route */
     pool.getConnection((err, conn) => {
         var sqlQuery = `INSERT INTO students(name, surname, email) VALUES(?, ?, ?)`;
 
@@ -41,12 +49,16 @@ exports.postStudent = (req, res, next) => {
     })
 }
 
+/* Controller to update a student in the database */
 exports.postUpdateStudent = (req, res, next) => {
+
+    /* get necessary data sent */
     const id = req.body.id;
     const name = req.body.name;
     const surname = req.body.surname;
     const email = req.body.email;
 
+    /* create the connection, execute query, flash respective message and redirect to grades route */
     pool.getConnection((err, conn) => {
         var sqlQuery = `UPDATE students SET name = ?, surname = ?, email = ? WHERE id = ${id}`;
 

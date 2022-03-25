@@ -1,9 +1,13 @@
 const { pool } = require('../utils/database');
 
+/* Controller to retrieve grades from database */
 exports.getGrades = (req, res, next) => {
+
+    /* check for messages in order to show them when rendering the page */
     let messages = req.flash("messages");
     if (messages.length == 0) messages = [];
 
+    /* create the connection, execute query, render data */
     pool.getConnection((err, conn) => {
         
         conn.promise().query('SELECT * FROM grades')
@@ -20,9 +24,12 @@ exports.getGrades = (req, res, next) => {
 
 }
 
+/* Controller to delete grade by ID from database */
 exports.postDeleteGrade = (req, res, next) => {
+    /* get id from params */
     const id = req.params.id;
     
+    /* create the connection, execute query, flash respective message and redirect to grades route */
     pool.getConnection((err, conn) => {
         var sqlQuery = `DELETE FROM grades WHERE id = ${id}`;
 
