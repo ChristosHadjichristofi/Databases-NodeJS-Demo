@@ -3,6 +3,7 @@
 ## Demo created with other Languages and Technologies
 1. [Java](https://github.com/ChristosHadjichristofi/Databases-Java-Demo)
 2. [Python](https://github.com/DimK19/Databases-Python-Demo)
+3. [PHP](https://github.com/cpefkianakis/Databases-PHP-Demo)
 
 ## Dependencies
 1. [NodeJS](https://nodejs.org/en/)
